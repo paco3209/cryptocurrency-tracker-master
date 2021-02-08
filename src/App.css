@@ -7,7 +7,7 @@
 
 body {
   background-color:white;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -81,3 +81,55 @@ ul {
 .trending-coins{
   text-align: center;
 }
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #F8FAFD;
+}
+
+.symbol {
+  display: inline-block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: .75rem;
+}
+.symbol-label{
+  border-radius: 0.75rem;
+}
+
+.mr-6, .mx-6 {
+  margin-right: 1.5rem!important;
+}
+
+.text-dark-75 {
+  color: #3f4254!important;
+  font-weight: 600!important;
+  margin-bottom: .25rem!important;
+}
+
+.text-muted {
+  color: #b5b5c3!important;
+  font-size: 12px;
+}
+
+.text-hover-primary, a.text-hover-primary{
+  transition: color .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease,-webkit-box-shadow .15s ease;
+}
+.pb-9, .py-9 {
+  padding-bottom: 2.25rem!important;
+}
+
+.font-size-h4 {
+  font-size: 1.35rem!important;
+}
+.text-dark-75 {
+  color: #3f4254!important;
+}
+.font-weight-bolder {
+  font-weight: 600!important;
+}
+
+.card-header{
+  background-color: white;
+}
+

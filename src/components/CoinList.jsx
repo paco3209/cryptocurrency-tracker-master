@@ -13,7 +13,8 @@ const CoinList = () => {
       setIsLoading(true);
       const response = await coinGecko.get("/coins/markets/", {
         params: {
-          vs_currency: "usd"
+          vs_currency: "usd",
+          per_page:20
           
         },
       });
@@ -40,7 +41,7 @@ const CoinList = () => {
       <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col"></th>
+      <th scope="col">#</th>
       <th scope="col">Simbolo</th>
       <th scope="col">Nombre</th>
       <th scope="col">Ultimo Precio</th>
@@ -48,7 +49,7 @@ const CoinList = () => {
     </tr>
         </thead>
         <tbody>
-        {coins.map((coin) => {
+        {coins.slice(0,10).map((coin) => {
           return <Coin key={coin.id} coin={coin} deleteCoin={deleteCoin} />;
         })}
           </tbody>

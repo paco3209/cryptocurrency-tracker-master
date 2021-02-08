@@ -34,7 +34,7 @@ const LastNews = () => {
         return (
             
             <ul className="list-group-horizontal align">
-                {news.map((notice, index) => {
+                {news.slice(0,10).map((notice, index) => {
                     
                     return <New key={index} notice={notice} /> ;
                 })}
@@ -49,7 +49,7 @@ const LastNews = () => {
             <div className="col-xl-6 col-xxl-4">
                 <div className="card card-custom card-stretch gutter-b">
                     <div className="card-header border-0 pt-6">
-                        <h3 className="card-title align-items-start">Ultimas Noticias</h3>
+                        <h3 className="card-label font-weight-bolder font-size-h4 text-dark-75">Ultimas Noticias</h3>
                     </div>                        
                     <div className="card-body pt-7">
 
