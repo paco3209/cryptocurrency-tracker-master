@@ -31,19 +31,25 @@ const Trending = () => {
     
         return (
             
-            <ul className="coinlist list-group  mt-2">
+            <ul className="list-group-horizontal align">
                 {coins.map((coin, index) => {
-                    return <li className="list-group-item d-flex justify-content-between align-items-center"> <TrendingCoin key={index} coin={coin.item} /> </li>;
+                    return <li className="list-group-item"> <TrendingCoin key={index} coin={coin.item} /> </li>;
                 })}
             </ul>
         );
     };
 
     return (
-        <div >
-            <h4>Tendencia</h4>
-            {renderCoins()}
-        </div>
+        <section className="trending">
+            <div style={{ justifyContent: 'center' }}>
+                <div className="trending-title">
+                        <h2>Tendencias Crypto</h2>
+                </div>
+                <div className="trending-coins">
+                    {renderCoins()}
+                </div>
+            </div>
+        </section>
         
     )
 }

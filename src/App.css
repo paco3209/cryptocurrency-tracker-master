@@ -7,6 +7,7 @@
 
 body {
   background-color:white;
+  font-family: 'Inter', sans-serif;
 }
 
 ul {
@@ -14,12 +15,10 @@ ul {
 }
 
 .coinlist-image {
-  width: 30px;
+  width: 25px;
 }
 
-.coinlist-item {
-  display: flex;
-}
+
 
 .coinsummary {
   border-color: white !important;
@@ -27,7 +26,7 @@ ul {
 }
 
 .coin-data-category {
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .delete-icon {
@@ -44,3 +43,41 @@ ul {
   color: #417AF6;
 }
 
+
+
+.list-group-horizontal .list-group-item
+{
+  display: inline-block;
+   
+    
+}
+.list-group-horizontal .list-group-item
+{
+	margin-bottom: 0;
+	margin-left:-4px;
+	margin-right: 0;
+  border-right-width: 0;
+  border: 0;
+}
+.list-group-horizontal .list-group-item:first-child
+{
+	border-top-right-radius:0;
+	border-bottom-left-radius:4px;
+}
+.list-group-horizontal .list-group-item:last-child
+{
+	
+	border-bottom-left-radius:0;
+	border-right-width: 1px;
+}
+
+.trending-title{
+  text-align: center;
+}
+.trending{
+  margin-top: 20px;
+}
+
+.trending-coins{
+  text-align: center;
+}

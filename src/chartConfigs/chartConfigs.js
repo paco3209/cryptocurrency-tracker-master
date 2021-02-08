@@ -14,7 +14,9 @@ export const historyOptions = {
     xAxes: [
       {
         type: "time",
+        
         distribution: "linear",
+        
       },
     ],
   },

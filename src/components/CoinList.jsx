@@ -13,8 +13,8 @@ const CoinList = () => {
       setIsLoading(true);
       const response = await coinGecko.get("/coins/markets/", {
         params: {
-          vs_currency: "usd",
-          ids: watchList.join(","),
+          vs_currency: "usd"
+          
         },
       });
       console.log(response.data);
@@ -37,14 +37,14 @@ const CoinList = () => {
     }
 
     return (
-      <table class="table">
+      <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col"></th>
       <th scope="col">Simbolo</th>
       <th scope="col">Nombre</th>
       <th scope="col">Ultimo Precio</th>
-      <th scope="col">Variacion</th>
+      <th scope="col">Variación 24 hs</th>
     </tr>
         </thead>
         <tbody>

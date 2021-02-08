@@ -28,7 +28,7 @@ const HistoryChart = ({ data }) => {
         data: {
           datasets: [
             {
-              label: `${detail.name} price`,
+              label: `${detail.name} precio`,
               data: determineTimeFormat(),
               backgroundColor: 'rgba(226, 103, 239, 0.4)',
               borderColor: 'rgba(0, 0, 0, 0.1)',

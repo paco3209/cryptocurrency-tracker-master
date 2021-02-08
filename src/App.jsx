@@ -7,6 +7,7 @@ import "./App.css";
 import { WatchListContextProvider } from "./context/watchListContext";
 import Footer from "./components/Footer"
 
+
 const App = () => {
   return (
     <div className="container">
