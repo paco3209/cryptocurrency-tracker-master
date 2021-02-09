@@ -42,7 +42,7 @@ const CoinList = () => {
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Simbolo</th>
+      <th scope="col">Ticker</th>
       <th scope="col">Nombre</th>
       <th scope="col">Ultimo Precio</th>
       <th scope="col">Variación 24 hs</th>

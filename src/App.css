@@ -112,9 +112,7 @@ ul {
   font-size: 12px;
 }
 
-.text-hover-primary, a.text-hover-primary{
-  transition: color .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease,-webkit-box-shadow .15s ease;
-}
+
 .pb-9, .py-9 {
   padding-bottom: 2.25rem!important;
 }
@@ -132,4 +130,5 @@ ul {
 .card-header{
   background-color: white;
 }
+
 

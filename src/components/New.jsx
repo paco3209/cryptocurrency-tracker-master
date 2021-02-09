@@ -8,7 +8,7 @@ const New = ({key,notice}) => {
                         <div className="symbol-label" style={{height:'70px',width:'105px', backgroundImage: `url(${notice.imageurl})`, backgroundSize:'cover'}}></div>
             </div>
             <div className="d-flex flex-column flex-grow-1">
-                <a href={notice.url} className="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">{notice.title}</a>
+                <a href={notice.url} className="news-title text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">{notice.title}</a>
             <span className="text-muted">{notice.source_info.name }</span>
 
             </div>
