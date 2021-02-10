@@ -49,7 +49,7 @@ const CoinList = () => {
     </tr>
         </thead>
         <tbody>
-        {coins.slice(0,10).map((coin) => {
+        {coins.slice(0,15).map((coin) => {
           return <Coin key={coin.id} coin={coin} deleteCoin={deleteCoin} />;
         })}
           </tbody>

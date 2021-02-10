@@ -6,14 +6,18 @@ const HistoryChart = ({ data }) => {
   const chartRef = useRef();
   const { day, week, year, detail } = data;
   const [timeFormat, setTimeFormat] = useState("24h");
+  const [time, settime] = useState("hour");
 
   const determineTimeFormat = () => {
     switch (timeFormat) {
       case "24h":
+        settime("hour")
         return day;
       case "7d":
+        settime("day")
         return week;
       case "1y":
+        settime("month")
         return year;
       default:
         return day;
@@ -21,8 +25,9 @@ const HistoryChart = ({ data }) => {
   };
 
   useEffect(() => {
+    console.log(data);
     if (chartRef && chartRef.current && detail) {
-      console.log("yeah");
+      
       const chartInstance = new Chartjs(chartRef.current, {
         type: "line",
         data: {
@@ -30,6 +35,7 @@ const HistoryChart = ({ data }) => {
             {
               label: `Precio de ${detail.name}`,
               data: determineTimeFormat(),
+              
               backgroundColor: 'rgb(241, 247, 254)',
               borderColor: 'rgb(147, 205, 250)',
               pointRadius: 0,
@@ -37,7 +43,30 @@ const HistoryChart = ({ data }) => {
           ],
         },
         options: {
-          ...historyOptions,
+          lineHeightAnnotation: {
+            always: true,
+            hover: true,
+            lineWeight: 1.5,
+          },
+        
+          animation: {
+            duration: 2000,
+          },
+          maintainAspectRatio: false,
+          responsive: true,
+          scales: {
+            xAxes: [
+              {
+                type: "time",
+                time: {
+                  unit: time
+                  //ver 
+              },
+                distribution: "linear",
+                
+              },
+            ],
+          }
         },
       });
     }

@@ -43,7 +43,7 @@ const Trending = () => {
         <section className="trending">
             <div style={{ justifyContent: 'center' }}>
                 <div className="trending-title">
-                        <h2>Tendencias Crypto</h2>
+                        <h2> Tendencias Crypto</h2>
                 </div>
                 <div className="trending-coins">
                     {renderCoins()}

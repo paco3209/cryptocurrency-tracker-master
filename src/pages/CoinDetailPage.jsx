@@ -4,6 +4,7 @@ import HistoryChart from "../components/HistoryChart";
 import CoinData from "../components/CoinData";
 import coinGecko from "../apis/coinGecko";
 
+
 const CoinDetailPage = () => {
   const { id } = useParams();
   const [coinData, setCoinData] = useState({});
@@ -57,7 +58,7 @@ const CoinDetailPage = () => {
       });
       setIsLoading(false);
     };
-      
+      console.log(coinData);
     fetchData();
   }, []);
 
@@ -75,6 +76,8 @@ const CoinDetailPage = () => {
       <div className="coinlist">
         <HistoryChart data={coinData} />
         <CoinData data={coinData.detail} />
+
+
       </div>
     );
   };
