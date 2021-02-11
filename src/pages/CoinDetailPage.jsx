@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import HistoryChart from "../components/HistoryChart";
 import CoinData from "../components/CoinData";
 import coinGecko from "../apis/coinGecko";
+import CryptoValue from "../components/CryptoValue";
 
 
 const CoinDetailPage = () => {
@@ -76,6 +77,7 @@ const CoinDetailPage = () => {
       <div className="coinlist">
         <HistoryChart data={coinData} />
         <CoinData data={coinData.detail} />
+        <CryptoValue />
 
 
       </div>

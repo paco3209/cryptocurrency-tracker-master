@@ -76,7 +76,7 @@ const HistoryChart = ({ data }) => {
     if (detail) {
       return (
         <>
-          <p className="my-0">Último Precio: $ {detail.current_price.toFixed(2)}</p>
+          <p className="my-0">Último Precio:  {detail.current_price.toFixed(2)} USD</p>
           <p
             className={
               detail.price_change_24h < 0

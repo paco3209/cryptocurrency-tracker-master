@@ -13,7 +13,7 @@ const Coin = ({ coin, deleteCoin }) => {
         <td scope="col"><img className="coinlist-image" src={coin.image} alt="" /></td>
         <td scope="col"><p>{ coin.symbol}</p></td>
         <td scope="col"><Link to={`/coins/${coin.id}`} className="text-decoration-none my-1 coin"><p className="text-left">{ coin.name}</p></Link></td>
-        <td scope="col"><span className="text-decoration-none"><NumberFormat value={coin.current_price} displayType={'text'} thousandSeparator={true} prefix={'$ '} /></span></td>
+        <td scope="col"><span className="text-decoration-none"><NumberFormat value={coin.current_price} displayType={'text'} thousandSeparator={true} suffix={' USD'}  /></span></td>
       <td scope="col">
         <span
           className={
