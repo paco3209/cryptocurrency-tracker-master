@@ -2,21 +2,27 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 
 
-const CryptoValue = () => {
+const CryptoValue = ({data}) => {
     const [coinprice, setcoinprice] = useState({});
     const [isLoading, setIsLoading] = useState(false);
+    const {  detail } = data;
+    
 
     useEffect(() => {
+        if(detail){
         fetchData();
+    }
+        
     }, [])
 
     const fetchData = async () => {
         setIsLoading(true);
-        const response = await Axios.get("https://criptoya.com/api/btc/ars/0.1");
-        console.log(response.data);
+        const response = await Axios.get(`https://criptoya.com/api/${detail.symbol}/ars/0.1`);
+        
         setcoinprice(response.data);
         setIsLoading(false);
     };
+
 
     const renderCoins = () => {
         if (isLoading) {
@@ -26,19 +32,34 @@ const CryptoValue = () => {
                 </div>
             </div>;
         }
-    
-        return (
-            
-            Object.keys(coinprice).map((item, i) => (
-         
-
-                <tr  key={i}>
-                    <th scope>{i + 1}</th>
-                    <td>{item}</td>
-                    <td> $ { coinprice[item].ask}</td>
+        if (coinprice == "Invalid exchange") {
+            return (
+                <tr>
+                    <th>No existen Exchanges en Argentina que operen con esta moneda</th>
+                    <td>-</td>
+                    <td>-</td>
                 </tr>
-            ))
-        );
+                
+                
+            )
+        } else {
+            return (
+            
+            
+
+                Object.keys(coinprice).map((item, i) => (
+             
+    
+                    <tr  key={i}>
+                        <th scope>{i + 1}</th>
+                        <td>{item}</td>
+                        <td> $ { coinprice[item].ask}</td>
+                    </tr>
+                ))
+            );
+        }
+    
+        
     };
 
 

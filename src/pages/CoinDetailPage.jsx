@@ -77,7 +77,7 @@ const CoinDetailPage = () => {
       <div className="coinlist">
         <HistoryChart data={coinData} />
         <CoinData data={coinData.detail} />
-        <CryptoValue />
+        <CryptoValue data={coinData} />
 
 
       </div>
