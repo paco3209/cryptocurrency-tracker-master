@@ -30,19 +30,41 @@ const CryptoValue = () => {
         return (
             
             Object.keys(coinprice).map((item, i) => (
-                <li className="travelcompany-input" key={i}>
-                    <span className="input-label">{item} - { coinprice[item].ask}</span>
-                </li>
+         
+
+                <tr  key={i}>
+                    <th scope>{i + 1}</th>
+                    <td>{item}</td>
+                    <td> $ { coinprice[item].ask}</td>
+                </tr>
             ))
         );
     };
 
 
     return (
+        <>
         <div>
-            
-            {renderCoins()}
+            <h4>Cotizacion Exchanges Argentinos</h4>
         </div>
+        <div>
+            <table class="table table-sm">
+  <thead>
+    <tr className="bg-primary text-white">
+    <th scope="col">#</th>  
+      <th scope="col">Exchange</th>
+      <th scope="col">Cotizacion</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  {renderCoins()}
+  </tbody>
+</table>
+            
+           
+            </div>
+            </>
     )
 }
 
