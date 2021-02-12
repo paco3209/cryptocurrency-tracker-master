@@ -38,22 +38,26 @@ const CoinList = () => {
     }
 
     return (
+      <div className="table-responsive-xl">
       <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Ticker</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Ultimo Precio</th>
-      <th scope="col">Variación 24 hs</th>
+      <th scope="col" className="col-auto">#</th>
+      <th scope="col" className="col-md-auto">Ticker</th>
+      <th scope="col" className="col-md-auto">Nombre</th>
+      <th scope="col" className="col-md-auto">Ultimo Precio</th>
+      <th scope="col" className="col-md-auto">Variación 24 hs</th>
     </tr>
         </thead>
         <tbody>
         {coins.slice(0,15).map((coin) => {
           return <Coin key={coin.id} coin={coin} deleteCoin={deleteCoin} />;
         })}
+            
           </tbody>
-      </table>
+          
+        </table>
+        </div>
     );
   };
 

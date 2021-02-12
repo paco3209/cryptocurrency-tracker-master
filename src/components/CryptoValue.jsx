@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import NumberFormat from 'react-number-format';
 
 
 const CryptoValue = ({data}) => {
@@ -53,7 +54,7 @@ const CryptoValue = ({data}) => {
                     <tr  key={i}>
                         <th scope>{i + 1}</th>
                         <td>{item}</td>
-                        <td> $ { coinprice[item].ask}</td>
+                        <td><NumberFormat value={ coinprice[item].ask} displayType={'text'} thousandSeparator={true} fixedDecimalScale="true" suffix={' ARS'} decimalScale='2' />  </td>
                     </tr>
                 ))
             );
@@ -65,7 +66,8 @@ const CryptoValue = ({data}) => {
 
     return (
         <>
-        <div>
+    <div className="value-argexchange-container">
+        <div className="value-argexchange-title">
             <h4>Cotizacion Exchanges Argentinos</h4>
         </div>
         <div>
@@ -84,7 +86,8 @@ const CryptoValue = ({data}) => {
 </table>
             
            
-            </div>
+                </div>
+                </div>
             </>
     )
 }
