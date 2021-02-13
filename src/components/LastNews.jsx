@@ -16,8 +16,9 @@ const LastNews = () => {
 
     const fetchData = async () => {
         setIsLoading(true);
-        const response = await Axios.get("https://min-api.cryptocompare.com/data/v2/news/?lang=ES&api_key=76078a1b07abf4d50a870169fb522c23c372527b112975146ecd8792cb6f5434");
-        console.log(response.data.Data);
+        const response = await Axios.get("https://min-api.cryptocompare.com/data/v2/news/?lang=ES&api_key=76078a1b07abf4d50a870169fb522c23c372527b112975146ecd8792cb6f5434"            ) 
+        ;
+        
         setNews(response.data.Data);
         setIsLoading(false);
     };

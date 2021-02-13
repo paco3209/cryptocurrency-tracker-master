@@ -102,9 +102,10 @@ ul {
 }
 
 .text-dark-75 {
-  color: #3f4254!important;
+  color: #3f4254;
   font-weight: 600!important;
   margin-bottom: .25rem!important;
+  transition: 0.5s;
 }
 
 .text-muted {
@@ -121,7 +122,12 @@ ul {
   font-size: 1.35rem!important;
 }
 .text-dark-75 {
-  color: #3f4254!important;
+  color: #3f4254;
+  transition: 0.5s;
+}
+
+.text-dark-75:hover{
+  color: #121314;
 }
 .font-weight-bolder {
   font-weight: 600!important;
@@ -140,4 +146,8 @@ ul {
 
 .value-argexchange-container{
   margin-top: 20px;
+}
+
+.footer-description{
+  font-size: 12px;
 }
