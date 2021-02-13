@@ -9,7 +9,7 @@ const CoinData = ({ data }) => {
           <div className="col-sm">
             <div className="d-flex flex-column">
               <span className="text-muted coin-data-category">Captitalización de Mercado</span>
-              <span><NumberFormat value={data.market_cap} displayType={'text'} thousandSeparator={true} prefix={'$ '} /> </span>
+              <span><NumberFormat value={data.market_cap} displayType={'text'} thousandSeparator={true} suffix={' USD'} /> </span>
             </div>
             <hr />
             <div className="d-flex flex-column">
@@ -23,12 +23,12 @@ const CoinData = ({ data }) => {
           <div className="col-sm">
             <div className="d-flex flex-column">
               <span className="text-muted coin-data-category">Volumen Últimas 24hs</span>
-              <span><NumberFormat value={data.total_volume}displayType={'text'} thousandSeparator={true} prefix={'$ '} /></span>
+              <span><NumberFormat value={data.total_volume}displayType={'text'} thousandSeparator={true} suffix={' USD'} /></span>
             </div>
             <hr />
             <div className="d-flex flex-column">
               <span className="text-muted coin-data-category">Máximo Últimas 24hs</span>
-              <span><NumberFormat value={data.high_24h} displayType={'text'} thousandSeparator={true} prefix={'$ '} /></span>
+              <span><NumberFormat value={data.high_24h} displayType={'text'} thousandSeparator={true} suffix={' USD'} /></span>
             </div>
           </div>
 
@@ -42,7 +42,7 @@ const CoinData = ({ data }) => {
             <hr />
             <div className="d-flex flex-column">
               <span className="text-muted coin-data-category">Mínimo Últimas 24hs</span>
-              <span><NumberFormat value={data.low_24h} displayType={'text'} thousandSeparator={true} prefix={'$ '} /></span>
+              <span><NumberFormat value={data.low_24h} displayType={'text'} thousandSeparator={true} suffix={' USD'} /></span>
             </div>
           </div>
         </div>
