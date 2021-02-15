@@ -35,7 +35,7 @@ const CoinData = ({ data }) => {
           <div className="col-sm">
             <div className="d-flex flex-column">
               <span className="text-muted coin-data-category">
-                Acciones en Circulación
+                Monedas en Circulación
               </span>
               <span><NumberFormat value={data.circulating_supply} displayType={'text'} thousandSeparator={true}/></span>
             </div>
