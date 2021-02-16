@@ -14,7 +14,8 @@ const CoinList = () => {
       const response = await coinGecko.get("/coins/markets/", {
         params: {
           vs_currency: "usd",
-          per_page:20
+          per_page: 20,
+          price_change_percentage: '1h,7d,30d'
           
         },
       });
@@ -45,8 +46,11 @@ const CoinList = () => {
       <th scope="col" className="col-auto">#</th>
       <th scope="col" className="col-md-auto">Ticker</th>
       <th scope="col" className="col-md-auto">Nombre</th>
-      <th scope="col" className="col-md-auto">Ultimo Precio</th>
-      <th scope="col" className="col-md-auto">Variación 24 hs</th>
+              <th scope="col" className="col-md-auto">Ultimo Precio</th>
+              <th scope="col" className="col-md-auto">Variación 1 h</th>
+              <th scope="col" className="col-md-auto">Variación 24 hs</th>
+              <th scope="col" className="col-md-auto">Variación 7 d</th>
+              <th scope="col" className="col-md-auto">Variación 30 d</th>
     </tr>
         </thead>
         <tbody>
