@@ -21,8 +21,8 @@ const Coin = ({ coin, deleteCoin }) => {
         <span
           className={
             coin.price_change_percentage_24h < 0
-              ? "text-danger mr-2"
-              : "text-success mr-2"
+              ? "text-danger"
+              : "text-success"
           }
         >
           {" "}
@@ -39,8 +39,8 @@ const Coin = ({ coin, deleteCoin }) => {
         <span
           className={
             coin.price_change_percentage_24h < 0
-              ? "text-danger mr-2"
-              : "text-success mr-2"
+              ? "text-danger"
+              : "text-success"
           }
         >
           {" "}
@@ -57,8 +57,8 @@ const Coin = ({ coin, deleteCoin }) => {
         <span
           className={
             coin.price_change_percentage_24h < 0
-              ? "text-danger mr-2"
-              : "text-success mr-2"
+              ? "text-danger"
+              : "text-success"
           }
         >
           {" "}
@@ -76,8 +76,8 @@ const Coin = ({ coin, deleteCoin }) => {
         <span
           className={
             coin.price_change_percentage_30d_in_currency < 0
-              ? "text-danger mr-2"
-              : "text-success mr-2"
+              ? "text-danger"
+              : "text-success"
           }
         >
           {" "}
