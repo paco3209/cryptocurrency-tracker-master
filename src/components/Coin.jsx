@@ -20,13 +20,13 @@ const Coin = ({ coin, deleteCoin }) => {
       <td scope="col">
         <span
           className={
-            coin.price_change_percentage_24h < 0
+            coin.price_change_percentage_1h_in_currency < 0
               ? "text-danger"
               : "text-success"
           }
         >
           {" "}
-          {coin.price_change_percentage_24h < 0 ? (
+          {coin.price_change_percentage_1h_in_currency < 0 ? (
             <i className="fas fa-sort-down align-middle mr-1"></i>
           ) : (
             <i className="fas fa-sort-up align-middle mr-1"></i>
@@ -56,7 +56,7 @@ const Coin = ({ coin, deleteCoin }) => {
       <td scope="col">
         <span
           className={
-            coin.price_change_percentage_24h < 0
+            coin.price_change_percentage_7d_in_currency < 0
               ? "text-danger"
               : "text-success"
           }
