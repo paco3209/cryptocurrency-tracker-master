@@ -159,3 +159,9 @@ ul {
 .sortable tr {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  .table-hover{
+    font-size: 13px;
+  }
+}
