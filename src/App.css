@@ -155,3 +155,7 @@ ul {
 .table-hover{
   font-size: 15px;
 }
+
+.sortable tr {
+  cursor: pointer;
+}

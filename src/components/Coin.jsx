@@ -9,7 +9,10 @@ const Coin = ({ coin, deleteCoin }) => {
       
       
      
-      <tr>
+    <tr   onClick={(e) => {
+      e.preventDefault();
+      window.location.href=`/coins/${coin.id}`;
+      }}>
         <td scope="col"><img className="coinlist-image" src={coin.image} alt="" /></td>
         <td scope="col"><p>{ coin.symbol}</p></td>
         <td scope="col"><Link to={`/coins/${coin.id}`} className="text-decoration-none my-1 coin"><p className="text-left">{ coin.name}</p></Link></td>

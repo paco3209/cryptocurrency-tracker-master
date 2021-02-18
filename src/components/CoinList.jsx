@@ -40,7 +40,7 @@ const CoinList = () => {
 
     return (
       <div className="table-responsive-xl">
-      <table class="table table-hover">
+      <table class="table table-hover sortable">
   <thead>
     <tr>
       <th scope="col" className="col-auto">#</th>
