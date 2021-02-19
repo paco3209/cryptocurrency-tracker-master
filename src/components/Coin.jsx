@@ -88,7 +88,8 @@ const Coin = ({ coin, deleteCoin }) => {
           )}
           <NumberFormat value={coin.price_change_percentage_30d_in_currency} displayType={'text'} thousandSeparator={true} decimalScale={2} suffix={' %'}  />
             </span>
-            </td>
+      </td>
+      <td scope="col"><span className="text-decoration-none"><NumberFormat value={coin.market_cap} displayType={'text'} thousandSeparator={true} /></span></td>
       
         </tr>
           

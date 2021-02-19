@@ -51,6 +51,7 @@ const CoinList = () => {
               <th scope="col" className="col-md-auto">Variación 24 hs</th>
               <th scope="col" className="col-md-auto">Variación 7 d</th>
               <th scope="col" className="col-md-auto">Variación 30 d</th>
+              <th scope="col" className="col-md-auto">Cap. de Mercado (USD)</th>
     </tr>
         </thead>
         <tbody>
