@@ -7,14 +7,20 @@ const HistoryChart = ({ data }) => {
   const { day, week, year, detail } = data;
   const [timeFormat, setTimeFormat] = useState("24h");
   const [time, settime] = useState("hour");
+  
+  
+  
 
   const determineTimeFormat = () => {
+
     switch (timeFormat) {
       case "24h":
         settime("hour")
+        
         return day;
       case "7d":
         settime("day")
+        
         return week;
       case "1y":
         settime("month")
@@ -24,11 +30,22 @@ const HistoryChart = ({ data }) => {
     }
   };
 
+  
+
   useEffect(() => {
     console.log(data);
+    
+
+    
+
+    
     if (chartRef && chartRef.current && detail) {
       
+      
+      
+      
       const chartInstance = new Chartjs(chartRef.current, {
+         
         type: "line",
         data: {
           datasets: [
@@ -69,6 +86,7 @@ const HistoryChart = ({ data }) => {
           }
         },
       });
+      chartInstance.clear()
     }
   });
 
@@ -94,7 +112,7 @@ const HistoryChart = ({ data }) => {
     <div className="bg-white border mt-2 rounded p-3">
       <div>{renderPrice()}</div>
       <div>
-        <canvas ref={chartRef} id="myChart" width={250} height={250}></canvas>
+        <canvas ref={chartRef} id="myCharts" width={250} height={250}></canvas>
       </div>
 
       <div className="chart-button mt-1">

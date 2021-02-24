@@ -165,3 +165,29 @@ ul {
     font-size: 12px;
   }
 }
+
+.subheader .subheader-nav.nav{
+  display: flex;
+  flex-shrink: 0;
+}
+
+.nav-label{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.nav-item{
+  border-right: 1px solid #ebedf3;
+  justify-content: flex-start;
+  padding-left: 2.5rem!important;
+  padding-right: 2.5rem!important;
+}
+
+.title-eth-gas{
+  color: #268AF6;
+}
+
+.text-muted {
+  font-size: 11px;
+}
